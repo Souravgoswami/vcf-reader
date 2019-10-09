@@ -59,16 +59,3 @@ VCF = Class.new do
 	alias :inspect :to_s
 	alias :to_hash :to_h
 end
-
-contacts = VCF.new(File.read(File.join(PATH, '00001.vcf')))
-# p contacts.search('sik')
-# p contacts[/^TEL.+$/]
-# p contacts.to_h
-p VCF.create(File.join(PATH, 'hello'), n: :Sourav, fn: 'Sourav Goswami', telcell: 9840222222)
-p contacts.to_h
-
-# p contacts[/^TEL.+$/]
-# p contacts.search '96740'
-# p contacts.search('kausik')
-# p contacts.fetch('Kausik', /TEL.*/)
-# p
