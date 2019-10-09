@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+$VERBOSE = true
+
 Hash.class_exec { define_method(:fetch_r) { |reg| keys.select { |x| x[reg] }.map! { |x| self[x] } } }
 
 Kernel.class_exec { define_method(:then) { |&block| block === self } } unless defined?(Kernel.then)
