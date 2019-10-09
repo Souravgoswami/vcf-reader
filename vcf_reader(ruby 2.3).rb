@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Frozen_String_Literal: true
+# Warn_Indent: true
 $VERBOSE = true
 
 Hash.class_exec { define_method(:fetch_r) { |reg| keys.select { |x| x[reg] }.map! { |x| self[x] } } }
